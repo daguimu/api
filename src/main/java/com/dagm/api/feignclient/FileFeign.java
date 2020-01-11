@@ -13,6 +13,7 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.context.annotation.Bean;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RequestPart;
@@ -29,7 +30,7 @@ public interface FileFeign {
      * 调用feign 对文件进行上传
      *
      * @param file 待上传的文件
-     * @return com.dagm.shorter.res.BaseResult<java.lang.String>
+     * @return com.dagm.shorter.res.BaseResult java.lang.String
      * @author Guimu
      * @date 2020/1/8
      */
@@ -37,14 +38,14 @@ public interface FileFeign {
     BaseResult<String> upload(@RequestPart("file") MultipartFile file);
 
     /**
-     * 文件下载
+     * 等待下载文件名
      *
      * @return feign.Response
      * @author Guimu
      * @date 2020/1/8
      */
-    @GetMapping(value = "/inner/download")
-    Response download(@RequestParam("filename") String filename);
+    @GetMapping(value = "/inner/download/{filename:.+}")
+    Response download(@PathVariable("filename") String filename);
 
     class MultipartSupportConfig {
 

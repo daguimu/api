@@ -10,8 +10,8 @@ import lombok.Setter;
 import lombok.experimental.Accessors;
 
 /**
- * @author: Guimu
- * @created: 2020/01/03
+ * @author Guimu
+ * @date  2020/01/03
  */
 @Getter
 @Setter

@@ -31,7 +31,7 @@ public interface ShorterFeign {
      * 短网址转换
      *
      * @param addShortRecReq 待转换的url
-     * @return com.dagm.shorter.res.BaseResult<java.lang.String>
+     * @return com.dagm.shorter.res.BaseResult java.lang.String
      * @author Guimu
      * @date 2020/1/8
      */
@@ -42,7 +42,7 @@ public interface ShorterFeign {
      * 还原短网址
      *
      * @param addShortRecReq 还原短url
-     * @return com.dagm.shorter.res.BaseResult<java.lang.String>
+     * @return com.dagm.shorter.res.BaseResult java.lang.String
      * @author Guimu
      * @date 2020/1/8
      */
