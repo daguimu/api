@@ -28,7 +28,7 @@ public interface SmsServiceFeign {
      * 调用feign 获取手机验证码
      *
      * @param generateCodeDto 获取验证码参数
-     * @return com.dagm.devtool.res.BaseResult<java.lang.String>
+     * @return BaseResult
      * @author Guimu
      * @date 2020/2/16
      */
@@ -49,7 +49,7 @@ public interface SmsServiceFeign {
     /**
      * @param phone 待查手机号
      * @param bizId 业务id
-     * @return com.dagm.devtool.res.BaseResult<com.dagm.api.dto.SmsDetail> 短信详情
+     * @return SmsDetail  短信详情
      * @author Guimu
      * @date 2020/2/16
      */
