@@ -27,5 +27,6 @@ public class UserDTO {
     private Integer userType;
     private Integer status;
     private Date addTime;
-
+    private String avatarUrl;
+    private String wallPaper;
 }
