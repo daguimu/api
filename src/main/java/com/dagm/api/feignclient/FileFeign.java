@@ -5,6 +5,7 @@
  */
 package com.dagm.api.feignclient;
 
+import com.dagm.api.req.DeleteFileReq;
 import com.dagm.devtool.res.BaseResult;
 import feign.Response;
 import feign.codec.Encoder;
@@ -15,6 +16,7 @@ import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestPart;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -38,6 +40,7 @@ public interface FileFeign {
 
     /**
      * 等待下载文件名
+     *
      * @param filename 文件名
      * @return feign.Response
      * @author Guimu
@@ -45,6 +48,16 @@ public interface FileFeign {
      */
     @GetMapping(value = "/inner/download/{filename:.+}")
     Response download(@PathVariable("filename") String filename);
+
+    /**
+     * 删除短网址对应的文件
+     *
+     * @return 是否删除成功
+     * @author Guimu
+     * @date 2020/4/12
+     */
+    @PostMapping(value = "/delete")
+    BaseResult<String> deleteFile(@RequestBody DeleteFileReq deleteFileReq);
 
     class MultipartSupportConfig {
 
