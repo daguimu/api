@@ -11,7 +11,7 @@
   </parent>
   <groupId>com.dagm</groupId>
   <artifactId>api</artifactId>
-  <version>0.0.10-BETA</version>
+  <version>0.0.11-BETA</version>
   <name>api</name>
   <description>api</description>
 
