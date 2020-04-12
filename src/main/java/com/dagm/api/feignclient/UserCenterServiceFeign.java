@@ -51,7 +51,7 @@ public interface UserCenterServiceFeign {
      * @date 2020/4/12
      */
     @PostMapping("/inner/chengeAvatarUrl")
-    BaseResult<Boolean> getUserById(ChangeAvatarReq changeAvatarReq);
+    BaseResult<Boolean> chengeAvatarUrl(ChangeAvatarReq changeAvatarReq);
 
 
 }
