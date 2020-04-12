@@ -6,9 +6,11 @@
 package com.dagm.api.feignclient;
 
 import com.dagm.api.dto.UserDTO;
+import com.dagm.api.req.ChangeAvatarReq;
 import com.dagm.devtool.res.BaseResult;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 /**
@@ -41,6 +43,15 @@ public interface UserCenterServiceFeign {
      */
     @GetMapping(value = "/inner/getUserById")
     BaseResult<UserDTO> getUserById(@RequestParam(value = "userId") Long userId);
+
+    /**
+     * 增加需改用户头像的inner api
+     * @return  Boolean 是否修改成功
+     * @author Guimu
+     * @date 2020/4/12
+     */
+    @PostMapping("/inner/chengeAvatarUrl")
+    BaseResult<Boolean> getUserById(ChangeAvatarReq changeAvatarReq);
 
 
 }
