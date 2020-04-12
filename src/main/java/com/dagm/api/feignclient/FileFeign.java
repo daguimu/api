@@ -15,6 +15,7 @@ import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RequestPart;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -46,6 +47,16 @@ public interface FileFeign {
      */
     @GetMapping(value = "/inner/download/{filename:.+}")
     Response download(@PathVariable("filename") String filename);
+
+    /**
+     * 删除短网址对应的文件
+     *
+     * @return 是否删除成功
+     * @author Guimu
+     * @date 2020/4/12
+     */
+    @GetMapping(value = "/delete")
+    BaseResult<String> deleteFile(@RequestParam(value = "filename") String filename);
 
     class MultipartSupportConfig {
 
