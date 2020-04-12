@@ -11,6 +11,7 @@ import com.dagm.devtool.res.BaseResult;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 
 /**
@@ -51,7 +52,7 @@ public interface UserCenterServiceFeign {
      * @date 2020/4/12
      */
     @PostMapping("/inner/chengeAvatarUrl")
-    BaseResult<Boolean> chengeAvatarUrl(ChangeAvatarReq changeAvatarReq);
+    BaseResult<Boolean> chengeAvatarUrl(@RequestBody ChangeAvatarReq changeAvatarReq);
 
 
 }
