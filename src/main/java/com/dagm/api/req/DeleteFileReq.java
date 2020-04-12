@@ -5,6 +5,7 @@
  */
 package com.dagm.api.req;
 
+import com.dagm.devtool.model.BaseObject;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.experimental.Accessors;
@@ -17,7 +18,7 @@ import lombok.experimental.Accessors;
 @Getter
 @Setter
 @Accessors(chain = true)
-public class DeleteFileReq {
+public class DeleteFileReq extends BaseObject {
 
     /**
      * 短网址文件名

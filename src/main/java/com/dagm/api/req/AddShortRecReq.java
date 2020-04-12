@@ -5,6 +5,7 @@
  */
 package com.dagm.api.req;
 
+import com.dagm.devtool.model.BaseObject;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.experimental.Accessors;
@@ -16,7 +17,7 @@ import lombok.experimental.Accessors;
 @Getter
 @Setter
 @Accessors(chain = true)
-public class AddShortRecReq {
+public class AddShortRecReq extends BaseObject {
 
     private String url;
 }
