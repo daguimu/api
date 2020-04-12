@@ -15,6 +15,7 @@ import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RequestPart;
 import org.springframework.web.multipart.MultipartFile;
@@ -24,6 +25,7 @@ import org.springframework.web.multipart.MultipartFile;
  * @date 2020/01/08
  */
 @FeignClient(value = "file-service", configuration = FileFeign.MultipartSupportConfig.class)
+@RequestMapping(value = "/inner")
 public interface FileFeign {
 
     /**
@@ -34,7 +36,7 @@ public interface FileFeign {
      * @author Guimu
      * @date 2020/1/8
      */
-    @PostMapping(value = "/inner/upload", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
+    @PostMapping(value = "/upload", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     BaseResult<String> upload(@RequestPart("file") MultipartFile file);
 
     /**
@@ -45,7 +47,7 @@ public interface FileFeign {
      * @author Guimu
      * @date 2020/1/8
      */
-    @GetMapping(value = "/inner/download/{filename:.+}")
+    @GetMapping(value = "/download/{filename:.+}")
     Response download(@PathVariable("filename") String filename);
 
     /**
