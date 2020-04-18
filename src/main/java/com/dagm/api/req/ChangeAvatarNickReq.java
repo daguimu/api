@@ -18,11 +18,13 @@ import lombok.experimental.Accessors;
 @Getter
 @Setter
 @Accessors(chain = true)
-public class ChangeAvatarReq extends BaseObject {
+public class ChangeAvatarNickReq extends BaseObject {
 
     private Long userId;
 
     private String avatarUrl;
+
+    private String nickName;
 
 
 }
