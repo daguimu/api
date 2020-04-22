@@ -5,6 +5,7 @@
  */
 package com.dagm.api.feignclient;
 
+import com.dagm.api.dto.ChangePhoneDTO;
 import com.dagm.api.dto.UserDTO;
 import com.dagm.api.req.ChangeAvatarNickReq;
 import com.dagm.devtool.res.BaseResult;
@@ -46,13 +47,24 @@ public interface UserCenterServiceFeign {
     BaseResult<UserDTO> getUserById(@RequestParam(value = "userId") Long userId);
 
     /**
-     * 增加需改用户头像的inner api 和 nickname
-     * @return  Boolean 是否修改成功
+     * 修改用户头像的inner api 和 nickname
+     *
+     * @return Boolean 是否修改成功
      * @author Guimu
      * @date 2020/4/12
      */
     @PostMapping("/inner/chengeAvatarNick")
     BaseResult<Boolean> chengeAvatarNick(@RequestBody ChangeAvatarNickReq changeAvatarNickReq);
+
+    /**
+     * 增加修改用户手机号
+     *
+     * @return Boolean 是否修改成功
+     * @author Guimu
+     * @date 2020/4/12
+     */
+    @PostMapping("/inner/changePhone")
+    BaseResult<Boolean> changePhone(@RequestBody ChangePhoneDTO changePhoneDto);
 
 
 }
