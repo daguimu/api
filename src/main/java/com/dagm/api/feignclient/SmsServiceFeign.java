@@ -7,7 +7,6 @@ package com.dagm.api.feignclient;
 
 import com.dagm.api.dto.CodeDTO;
 import com.dagm.api.dto.GenerateCodeDTO;
-import com.dagm.api.dto.MsgPushDTO;
 import com.dagm.api.dto.SmsDetail;
 import com.dagm.devtool.res.BaseResult;
 import org.springframework.cloud.openfeign.FeignClient;
@@ -46,17 +45,6 @@ public interface SmsServiceFeign {
      */
     @PostMapping(value = "/inner/checkVerCode")
     BaseResult<Boolean> checkVerCode(@RequestBody CodeDTO codeDto);
-
-    /**
-     * 消息推送
-     *
-     * @param msgPushto 推送消息参数
-     * @return feign.Response
-     * @author Guimu
-     * @date 2020/2/16
-     */
-    @PostMapping(value = "/inner/pushMsg")
-    BaseResult<Boolean> pushMsg(@RequestBody MsgPushDTO msgPushto);
 
     /**
      * @param phone 待查手机号
