@@ -47,6 +47,7 @@ public interface UserCenterServiceFeign {
 
     /**
      * 修改用户头像的inner api 和 nickname
+     * @param changeAvatarNickReq 头像参数
      *
      * @return Boolean 是否修改成功
      * @author Guimu

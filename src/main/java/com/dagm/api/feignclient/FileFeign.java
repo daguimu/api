@@ -53,6 +53,7 @@ public interface FileFeign {
     /**
      * 删除短网址对应的文件
      *
+     * @param filename 文件名
      * @return 是否删除成功
      * @author Guimu
      * @date 2020/4/12
