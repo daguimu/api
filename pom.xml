@@ -12,7 +12,7 @@
 
     <groupId>com.dagm</groupId>
     <artifactId>api</artifactId>
-    <version>0.0.1</version>
+    <version>0.0.2</version>
     <packaging>jar</packaging>
     <name>api</name>
     <description>Demo project for Spring Boot</description>
