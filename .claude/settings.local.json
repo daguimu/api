@@ -5,7 +5,8 @@
       "Bash(java:*)",
       "Bash(mvn:*)",
       "Bash(find:*)",
-      "Bash(echo $JAVA_HOME)"
+      "Bash(echo $JAVA_HOME)",
+      "Read(//Users/guimu/**)"
     ],
     "deny": [],
     "ask": []
