@@ -5,8 +5,8 @@
  */
 package com.dagm.api.feignclient;
 
-import com.dagm.api.req.AddShortRecReq;
-import com.dagm.devtool.res.BaseResult;
+import com.dagm.api.common.req.AddShortRecReq;
+import com.dagm.api.common.model.BaseResult;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

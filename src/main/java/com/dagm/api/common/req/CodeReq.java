@@ -3,7 +3,7 @@
  * All rights reserved.
  *
  */
-package com.dagm.api.dto;
+package com.dagm.api.common.req;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -16,9 +16,10 @@ import lombok.experimental.Accessors;
 @Getter
 @Setter
 @Accessors(chain = true)
-public class GenerateCodeDTO {
+public class CodeReq {
 
     private Integer channelId;
     private String phone;
+    private String verificCode;
     private String bizTag;
 }

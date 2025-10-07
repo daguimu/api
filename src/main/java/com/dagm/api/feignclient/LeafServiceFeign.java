@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.PathVariable;
  * @date 2020/01/08
  */
 @FeignClient(name = "leaf-service")
-public interface LeafService {
+public interface LeafServiceFeign {
 
 
     /**

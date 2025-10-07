@@ -3,9 +3,9 @@
  * All rights reserved.
  *
  */
-package com.dagm.api.req;
+package com.dagm.api.common.req;
 
-import com.dagm.devtool.model.BaseObject;
+import com.dagm.api.common.model.BaseObject;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.experimental.Accessors;

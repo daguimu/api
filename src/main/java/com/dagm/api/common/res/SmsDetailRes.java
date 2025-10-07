@@ -3,9 +3,9 @@
  * All rights reserved.
  *
  */
-package com.dagm.api.dto;
+package com.dagm.api.common.res;
 
-import com.dagm.devtool.model.BaseObject;
+import com.dagm.api.common.model.BaseObject;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.experimental.Accessors;
@@ -17,7 +17,7 @@ import lombok.experimental.Accessors;
 @Getter
 @Setter
 @Accessors(chain = true)
-public class SmsDetail extends BaseObject {
+public class SmsDetailRes extends BaseObject {
 
     private String phoneNum;
     private Long sendStatus;

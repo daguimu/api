@@ -5,10 +5,10 @@
  */
 package com.dagm.api.feignclient;
 
-import com.dagm.api.dto.CodeDTO;
-import com.dagm.api.dto.GenerateCodeDTO;
-import com.dagm.api.dto.SmsDetail;
-import com.dagm.devtool.res.BaseResult;
+import com.dagm.api.common.req.CodeReq;
+import com.dagm.api.common.req.GenerateCodeReq;
+import com.dagm.api.common.res.SmsDetailRes;
+import com.dagm.api.common.model.BaseResult;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -27,24 +27,24 @@ public interface SmsServiceFeign {
     /**
      * 调用feign 获取手机验证码
      *
-     * @param generateCodeDto 获取验证码参数
+     * @param generateCodereq 获取验证码参数
      * @return BaseResult
      * @author Guimu
      * @date 2020/2/16
      */
     @PostMapping(value = "/inner/getVerCode")
-    BaseResult<String> getVerCode(@RequestBody GenerateCodeDTO generateCodeDto);
+    BaseResult<String> getVerCode(@RequestBody GenerateCodeReq generateCodereq);
 
     /**
      * 校验验证码是否有效
      *
-     * @param codeDto 校验验证码参数
+     * @param codeReq 校验验证码参数
      * @return feign.Response
      * @author Guimu
      * @date 2020/2/16
      */
     @PostMapping(value = "/inner/checkVerCode")
-    BaseResult<Boolean> checkVerCode(@RequestBody CodeDTO codeDto);
+    BaseResult<Boolean> checkVerCode(@RequestBody CodeReq codeReq);
 
     /**
      * @param phone 待查手机号
@@ -54,7 +54,7 @@ public interface SmsServiceFeign {
      * @date 2020/2/16
      */
     @GetMapping(value = "/inner/getSmsDetail")
-    BaseResult<SmsDetail> getSmsDetail(@RequestParam(value = "phone") String phone,
-        @RequestParam(value = "bizId") String bizId);
+    BaseResult<SmsDetailRes> getSmsDetail(@RequestParam(value = "phone") String phone,
+                                          @RequestParam(value = "bizId") String bizId);
 
 }

@@ -5,7 +5,7 @@
  */
 package com.dagm.api.feignclient;
 
-import com.dagm.devtool.res.BaseResult;
+import com.dagm.api.common.model.BaseResult;
 import feign.Response;
 import feign.codec.Encoder;
 import feign.form.spring.SpringFormEncoder;

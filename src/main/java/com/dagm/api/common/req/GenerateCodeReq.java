@@ -3,23 +3,22 @@
  * All rights reserved.
  *
  */
-package com.dagm.api.dto;
+package com.dagm.api.common.req;
 
-import java.util.List;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.experimental.Accessors;
 
 /**
  * @author Guimu
- * @date 2020/05/10
+ * @date 2020/02/16
  */
 @Getter
 @Setter
 @Accessors(chain = true)
-public class MsgPushDTO {
+public class GenerateCodeReq {
 
-    private String title;
-    private String body;
-    private List<String> deviceIds;
+    private Integer channelId;
+    private String phone;
+    private String bizTag;
 }

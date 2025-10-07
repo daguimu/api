@@ -1,4 +1,4 @@
-package com.dagm.devtool.res;
+package com.dagm.api.common.model;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;

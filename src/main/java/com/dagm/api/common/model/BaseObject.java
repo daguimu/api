@@ -1,4 +1,4 @@
-package com.dagm.devtool.model;
+package com.dagm.api.common.model;
 
 import lombok.Data;
 import com.alibaba.fastjson2.JSON;
