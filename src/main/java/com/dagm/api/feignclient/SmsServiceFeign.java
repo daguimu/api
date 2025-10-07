@@ -3,12 +3,13 @@
  * All rights reserved.
  *
  */
+
 package com.dagm.api.feignclient;
 
 import com.dagm.api.common.req.CodeReq;
 import com.dagm.api.common.req.GenerateCodeReq;
 import com.dagm.api.common.res.SmsDetailRes;
-import com.dagm.api.common.model.BaseResult;
+import com.dagm.devtool.res.BaseResult;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;

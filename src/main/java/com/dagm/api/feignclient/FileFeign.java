@@ -3,9 +3,10 @@
  * All rights reserved.
  *
  */
+
 package com.dagm.api.feignclient;
 
-import com.dagm.api.common.model.BaseResult;
+import com.dagm.devtool.res.BaseResult;
 import feign.Response;
 import feign.codec.Encoder;
 import feign.form.spring.SpringFormEncoder;

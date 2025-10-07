@@ -5,7 +5,7 @@
  */
 package com.dagm.api.common.res;
 
-import com.dagm.api.common.model.BaseObject;
+import com.dagm.devtool.model.BaseObject;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.experimental.Accessors;
