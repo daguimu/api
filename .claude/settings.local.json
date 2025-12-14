@@ -6,7 +6,10 @@
       "Bash(mvn:*)",
       "Bash(find:*)",
       "Bash(echo $JAVA_HOME)",
-      "Read(//Users/guimu/**)"
+      "Read(//Users/guimu/**)",
+      "Bash(xargs ls:*)",
+      "Bash(cat:*)",
+      "WebSearch"
     ],
     "deny": [],
     "ask": []
